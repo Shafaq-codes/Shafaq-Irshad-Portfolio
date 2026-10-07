@@ -153,7 +153,6 @@ function initCapsuleScrollInteraction() {
    -------------------------------------------------------------------------- */
 function initCopyEmail() {
   const copyBox = document.getElementById('copyEmailBox');
-  const directEmailLink = document.getElementById('directEmailLink');
   const emailVal = 'shafaqueries@gmail.com';
 
   async function handleCopy(targetBtn, defaultHtml) {
@@ -196,16 +195,6 @@ function initCopyEmail() {
         e.preventDefault();
         handleCopy(btnText, defaultHtml);
       }
-    });
-  }
-
-  if (directEmailLink) {
-    directEmailLink.addEventListener('click', () => {
-      try {
-        if (navigator.clipboard && window.isSecureContext) {
-          navigator.clipboard.writeText(emailVal);
-        }
-      } catch (e) {}
     });
   }
 }
