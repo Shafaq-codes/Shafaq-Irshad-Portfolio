@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Meta -->
+  <title>Shafaq Irshad — Product-Focused Full-Stack Developer & Creative</title>
+  <meta name="description" content="Shafaq Irshad is a Product-Focused Full-Stack Developer and Creative Technologist building high-performance systems and visual digital experiences." />
+  <meta name="author" content="Shafaq Irshad" />
+  <meta name="keywords" content="Shafaq Irshad, Full-Stack Developer, Web Developer, Video Editor, UI/UX, Portfolio, JavaScript, React, Node.js" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shafaq Irshad — Product-Focused Developer" />
+  <meta property="og:description" content="Building systems that actually work. Full-stack developer & creative technologist crafting high-performance digital products." />
+  <meta property="og:image" content="./assets/profile.jpg" />
+  <meta property="og:url" content="https://shafaq-portfolio.vercel.app/" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet & Favicon -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+</head>
+
+<body class="preloader-active">
+  <!-- Subtle Grid & Glow Background Elements -->
+  <div class="bg-grid-overlay"></div>
+  <div class="ambient-glow"></div>
+
+  <!-- 1. Kinetic Flash Intro Preloader (PLAN -> BUILD -> SHIP -> SCALE) -->
+  <div id="preloader" aria-label="Loading animation">
+    <div id="preloaderBgFlash" class="preloader-bg-flash"></div>
+    <div class="preloader-vignette"></div>
+    
+    <div class="preloader-counter">
+      <span>INITIALIZING ENGINE</span>
+      <span id="preloaderProgress">100%</span>
+    </div>
+
+    <div class="preloader-center-wrap">
+      <div class="preloader-brand-tag">SHAFAQ IRSHAD</div>
+      <div class="preloader-word-track">
+        <span id="preloaderWord" class="preloader-word">PLAN</span>
+      </div>
+      <div class="preloader-bar">
+        <div id="preloaderBarFill" class="preloader-bar-fill"></div>
+      </div>
+    </div>
+
+    <div class="preloader-footer">
+      <span>HIGH PERFORMANCE CORE</span>
+      <span>2026</span>
+    </div>
+
+    <button id="preloaderSkip" class="preloader-skip" type="button" aria-label="Skip preloader animation">
+      Skip [ESC]
+    </button>
+  </div>
+
+  <!-- 2. Fixed Top Editorial Header -->
+  <header class="top-editorial-bar">
+    <a href="#home" class="brand-logo-link" aria-label="Shafaq Irshad">
+      <span class="brand-si">SI</span><span class="brand-dot"></span>
+    </a>
+
+    <div class="nav-links-wrap">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#skills">Stack</a>
+      <a class="nav-link" href="#work">Work</a>
+      <a class="nav-link nav-cta" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 3. Hero Section (Headline with Eyes in Capsule Pill Mask) -->
+    <section class="hero-section" id="home" aria-label="Hero Introduction">
+      <div class="hero-main-headline-wrap">
+        <h1 class="hero-headline">
+          <span class="hero-line hero-line-1">BUILDING SYSTEMS</span>
+          <span class="hero-line hero-line-2">
+            <span>THAT</span>
+            <span class="word-highlight-wrap">
+              WORK
+              <svg class="hand-drawn-oval" viewBox="0 0 260 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 240,55 C 240,25 20,20 15,55 C 10,90 245,95 250,52 C 255,20 170,10 110,12" />
+              </svg>
+            </span>
+          </span>
+        </h1>
+
+        <div class="hero-subtext-grid">
+          <p class="hero-lead-text">
+            <strong>Full-stack developer & creative technologist</strong> building high-performance web applications, scalable digital architectures, and captivating visual media.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn-primary" href="#work">
+              Explore Projects <i class="fa-solid fa-arrow-down-right"></i>
+            </a>
+            <a class="btn-outline" href="#contact">
+              Let's Connect
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 4. Scroll-Reveal Full Portrait & About Section -->
+    <section class="reveal-portrait-section" id="about" aria-label="About Shafaq Irshad">
+      <div class="portrait-reveal-grid">
+        <!-- Full Image Card -->
+        <div class="portrait-visual-card">
+          <img src="./assets/profile.jpg" alt="Shafaq Irshad portrait" loading="lazy" />
+          <div class="portrait-badge-overlay">
+            <div>
+              <div class="portrait-badge-name">Shafaq Irshad</div>
+              <div class="portrait-badge-role">Full-Stack Developer & Creative</div>
+            </div>
+            <div class="portrait-status-pill">
+              <span class="status-dot"></span> Active & Shipping
+            </div>
+          </div>
+        </div>
+
+        <!-- About Text & Bento Statistics -->
+        <div class="portrait-content-side">
+          <span class="section-tag">ABOUT ME</span>
+          <h2 class="section-title">Bridging Clean Code with High-Impact Aesthetics.</h2>
+          <p class="section-lead">
+            Full-stack developer and creative video editor crafting high-performance digital products and immersive visual stories. Focused on scalable architectures, clean code execution, and intuitive interfaces with zero compromise on speed.
+          </p>
+
+          <div class="stats-bento-grid">
+            <div class="stat-box">
+              <div class="stat-box-number" style="color: var(--accent-cyan);">100%</div>
+              <div class="stat-box-label">Performance &amp; Code Quality</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-number" style="color: var(--accent-emerald);">01</div>
+              <div class="stat-box-label">Focus: Build Scalable Products</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-number" style="color: var(--accent-purple);">Modern</div>
+              <div class="stat-box-label">Full-Stack Tech Ecosystem</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-number" style="color: var(--accent-red);">Creative</div>
+              <div class="stat-box-label">Motion Graphics &amp; Editing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Skills & High-Tech Matrix Section -->
+    <section class="skills-section" id="skills" aria-label="Skills and Technologies">
+      <div>
+        <span class="section-tag">TECH STACK &amp; CAPABILITIES</span>
+      </div>
+
+      <div class="skills-bento-container">
+        <!-- Card 1: Frontend Engineering -->
+        <div class="skill-bento-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon cyan">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3 class="skill-card-title">Frontend Engineering</h3>
+          </div>
+          <p class="skill-card-desc">
+            Crafting responsive, accessible, and blazing-fast user interfaces with modern standards and pixel-perfect design fidelity.
+          </p>
+          <div class="skill-tags-wrap">
+            <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> Modern CSS3</span>
+            <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
+            <span class="tech-tag"><i class="fa-brands fa-react"></i> React</span>
+            <span class="tech-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Responsive UI/UX</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Backend & Database -->
+        <div class="skill-bento-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon purple">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <h3 class="skill-card-title">Backend &amp; Cloud Systems</h3>
+          </div>
+          <p class="skill-card-desc">
+            Building robust RESTful APIs, managing structured data storage, authentication flows, and seamless cloud deployments.
+          </p>
+          <div class="skill-tags-wrap">
+            <span class="tech-tag"><i class="fa-brands fa-node"></i> Node.js</span>
+            <span class="tech-tag"><i class="fa-solid fa-bolt"></i> REST APIs</span>
+            <span class="tech-tag"><i class="fa-solid fa-database"></i> MongoDB / Supabase</span>
+            <span class="tech-tag"><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub</span>
+            <span class="tech-tag"><i class="fa-solid fa-cloud"></i> Vercel Cloud</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Creative Video & Motion -->
+        <div class="skill-bento-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon red">
+              <i class="fa-solid fa-clapperboard"></i>
+            </div>
+            <h3 class="skill-card-title">Creative Media &amp; Motion Design</h3>
+          </div>
+          <p class="skill-card-desc">
+            Transforming concepts into high-engagement video content, dynamic motion graphics, and sleek brand visual identities using industry standard creative suites.
+          </p>
+          <div class="skill-tags-wrap">
+            <span class="tech-tag"><i class="fa-solid fa-film"></i> Adobe Premiere Pro</span>
+            <span class="tech-tag"><i class="fa-solid fa-burst"></i> After Effects</span>
+            <span class="tech-tag"><i class="fa-solid fa-palette"></i> Photoshop</span>
+            <span class="tech-tag"><i class="fa-brands fa-figma"></i> Figma</span>
+            <span class="tech-tag"><i class="fa-solid fa-sliders"></i> Color Grading &amp; Sound</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Architecture & Security -->
+        <div class="skill-bento-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon emerald">
+              <i class="fa-solid fa-terminal"></i>
+            </div>
+            <h3 class="skill-card-title">Systems &amp; Tools</h3>
+          </div>
+          <p class="skill-card-desc">
+            System administration, automation workflows, and exploring network tooling and intelligence platforms.
+          </p>
+          <div class="skill-tags-wrap">
+            <span class="tech-tag"><i class="fa-brands fa-linux"></i> Linux / Kali</span>
+            <span class="tech-tag"><i class="fa-solid fa-magnifying-glass"></i> OSINT Analysis</span>
+            <span class="tech-tag"><i class="fa-solid fa-shield-halved"></i> Web Security</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Featured Projects Showcase -->
+    <section class="projects-section" id="work" aria-label="Featured Projects">
+      <div class="projects-header-flex">
+        <div>
+          <span class="section-tag">SOME SELECTED PROJECTS</span>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project: Mail-2-Git -->
+        <article class="project-card">
+          <div class="project-preview-wrap">
+            <div class="project-mockup-pattern">
+              <i class="fa-solid fa-envelope-open-text project-mockup-icon" style="color: #38bdf8;"></i>
+            </div>
+            <span class="project-badge-type">OSINT &amp; Identity</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">
+              <span>Mail-2-Git</span>
+            </h3>
+            <p class="project-desc">
+              High-precision OSINT intelligence utility that traces and cryptographically links GitHub profiles, commit histories, and repositories from email addresses.
+            </p>
+            <div class="project-tech-pills">
+              <span class="project-pill">Python</span>
+              <span class="project-pill">FastAPI</span>
+              <span class="project-pill">Git Commits Graph</span>
+              <span class="project-pill">OSINT</span>
+              <span class="project-pill">Vercel</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 1 - AKTU Notes App -->
+        <article class="project-card">
+          <div class="project-preview-wrap">
+            <div class="project-mockup-pattern">
+              <i class="fa-solid fa-book-bookmark project-mockup-icon" style="color: var(--accent-cyan);"></i>
+            </div>
+            <span class="project-badge-type">Web Application</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">
+              <span>AKTU Notes App</span>
+            </h3>
+            <p class="project-desc">
+              Fast, responsive academic portal providing centralized engineering study resources, curated subject notes, and semester question papers.
+            </p>
+            <div class="project-tech-pills">
+              <span class="project-pill">JavaScript</span>
+              <span class="project-pill">HTML5 / CSS3</span>
+              <span class="project-pill">Local Storage</span>
+              <span class="project-pill">UI Architecture</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 1: Project 2 - GitHub Scroll -->
+        <article class="project-card">
+          <div class="project-preview-wrap">
+            <div class="project-mockup-pattern">
+              <i class="fa-brands fa-github project-mockup-icon" style="color: var(--accent-purple);"></i>
+            </div>
+            <span class="project-badge-type">Developer Tool</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">
+              <span>GitHub Scroll</span>
+            </h3>
+            <p class="project-desc">
+              Interactive GitHub repo showcase and scroll experience with real-time commit telemetry and dynamic repository visualization.
+            </p>
+            <div class="project-tech-pills">
+              <span class="project-pill">GitHub API</span>
+              <span class="project-pill">JavaScript</span>
+              <span class="project-pill">CSS Animations</span>
+              <span class="project-pill">REST APIs</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 1: Project 3 - Kinetic Portfolio -->
+        <article class="project-card">
+          <div class="project-preview-wrap">
+            <div class="project-mockup-pattern">
+              <i class="fa-solid fa-eye project-mockup-icon" style="color: var(--accent-emerald);"></i>
+            </div>
+            <span class="project-badge-type">Creative Development</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">
+              <span>Kinetic Portfolio</span>
+            </h3>
+            <p class="project-desc">
+              Zero-lag editorial portfolio architecture featuring kinetic preloader flash sequences, interactive eye capsule masking, and smooth bento interfaces.
+            </p>
+            <div class="project-tech-pills">
+              <span class="project-pill">Modern CSS</span>
+              <span class="project-pill">Vanilla JS</span>
+              <span class="project-pill">Hardware Accelerated</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 2: Project 4 - T-Bomber -->
+        <article class="project-card">
+          <div class="project-preview-wrap">
+            <div class="project-mockup-pattern">
+              <i class="fa-solid fa-bolt project-mockup-icon" style="color: var(--accent-red);"></i>
+            </div>
+            <span class="project-badge-type">Security &amp; Automation</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">
+              <span>T-Bomber</span>
+            </h3>
+            <p class="project-desc">
+              Multi-threaded automated API load stress and security testing utility built for endpoint vulnerability assessment and service resilience benchmarking.
+            </p>
+            <div class="project-tech-pills">
+              <span class="project-pill">Python</span>
+              <span class="project-pill">API Stress Testing</span>
+              <span class="project-pill">Automation</span>
+              <span class="project-pill">CLI / UI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 2: Project 5 - AI Calling Agent -->
+        <article class="project-card">
+          <div class="project-preview-wrap">
+            <div class="project-mockup-pattern">
+              <i class="fa-solid fa-headset project-mockup-icon" style="color: var(--accent-cyan);"></i>
+            </div>
+            <span class="project-badge-type">Autonomous AI</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">
+              <span>AI Calling Agent</span>
+            </h3>
+            <p class="project-desc">
+              Autonomous voice AI calling agent capable of holding natural, real-time voice conversations on behalf of company representatives with custom business training.
+            </p>
+            <div class="project-tech-pills">
+              <span class="project-pill">AI Voice / LLMs</span>
+              <span class="project-pill">Node.js</span>
+              <span class="project-pill">WebSockets</span>
+              <span class="project-pill">Speech Synthesis</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 2: Project 6 - OSINT Search Platform -->
+        <article class="project-card">
+          <div class="project-preview-wrap">
+            <div class="project-mockup-pattern">
+              <i class="fa-solid fa-shield-cat project-mockup-icon" style="color: #a855f7;"></i>
+            </div>
+            <span class="project-badge-type">Intelligence &amp; Security</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">
+              <span>OSINT Search Platform</span>
+            </h3>
+            <p class="project-desc">
+              High-performance open-source intelligence research interface designed for investigative workflows, data correlation, and sleek telemetry visualization.
+            </p>
+            <div class="project-tech-pills">
+              <span class="project-pill">JavaScript</span>
+              <span class="project-pill">Node.js</span>
+              <span class="project-pill">REST APIs</span>
+              <span class="project-pill">Cyber Intelligence</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. Contact & Direct Message Box (Formspree Connected) -->
+    <section class="contact-section" id="contact" aria-label="Contact Shafaq Irshad">
+      <span class="section-tag">GET IN TOUCH</span>
+      <h2 class="section-title" style="margin-top: 8px;">Let's Build Something Impactful Together.</h2>
+
+      <div class="contact-grid">
+        <!-- Direct Contact Info Column -->
+        <div class="contact-info-col">
+          <div class="contact-direct-card">
+            <h3 class="contact-direct-title">Direct Inquiries</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+              Have an idea, open developer position, or exciting creative project? Click below to copy my direct email or connect across social channels.
+            </p>
+
+            <div class="copy-email-box" id="copyEmailBox" role="button" tabindex="0" title="Click to copy email address">
+              <span class="copy-email-text">shafaqueries@gmail.com</span>
+              <span class="copy-email-btn"><i class="fa-regular fa-copy"></i> COPY</span>
+            </div>
+
+            <div class="social-links-grid">
+              <a class="social-link-item" href="https://github.com/Shafaq-codes" target="_blank" rel="noreferrer">
+                <i class="fa-brands fa-github social-link-icon"></i>
+                <span>GitHub</span>
+              </a>
+              <a class="social-link-item" href="https://www.linkedin.com/in/shafaq-irshad45" target="_blank" rel="noreferrer">
+                <i class="fa-brands fa-linkedin-in social-link-icon" style="color: #0a66c2;"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a class="social-link-item" href="https://www.instagram.com/shafaqqqqq._?igsh=MW94aTc0M256ZG96NQ==" target="_blank" rel="noreferrer">
+                <i class="fa-brands fa-instagram social-link-icon" style="color: #e4405f;"></i>
+                <span>Instagram</span>
+              </a>
+              <a class="social-link-item" href="mailto:shafaqueries@gmail.com?subject=Project%20Inquiry%20-%20Shafaq%20Irshad">
+                <i class="fa-solid fa-envelope social-link-icon" style="color: var(--accent-cyan);"></i>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Formspree Message Box -->
+        <div class="contact-form-card">
+          <h3 style="font-family: var(--font-sans); font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;">
+            Send a Direct Message
+          </h3>
+          
+          <form id="portfolioContactForm" action="https://formspree.io/f/xqewbewd" method="POST" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="senderName">Your Name</label>
+              <input class="form-input" type="text" id="senderName" name="name" placeholder="John" required />
+            </div>
+
+            <div class="form-group" style="flex-grow: 1; display: flex; flex-direction: column;">
+              <label class="form-label" for="senderMessage">Your Message</label>
+              <textarea class="form-textarea" id="senderMessage" name="message" placeholder="Hey Shafaq, let's discuss a project..." required style="flex-grow: 1;"></textarea>
+            </div>
+
+            <button class="form-submit-btn" id="formSubmitBtn" type="submit">
+              <span>Send Message</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <div id="formStatusMsg" class="form-status-msg" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. Editorial Footer -->
+  <footer class="editorial-footer">
+    <div class="footer-brand">
+      SHAFAQ IRSHAD <span style="color: var(--accent-red);">•</span> 2026
+    </div>
+    <div>
+      <a href="#home" style="display: inline-flex; align-items: center; gap: 6px; color: var(--text-secondary);">
+        BACK TO TOP <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
