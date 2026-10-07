@@ -482,23 +482,23 @@ img, video {
   white-space: nowrap;
 }
 
-/* Red Oval Hand-Drawn Highlight around "WORK" */
+/* Red Oval Hand-Drawn Highlight around "WORKS" */
 .word-highlight-wrap {
   position: relative;
   display: inline-block;
-  padding: 0 0.1em;
+  padding: 0 0.12em;
   color: var(--text-primary);
 }
 
 .hand-drawn-oval {
   position: absolute;
-  left: -12%;
-  top: -16%;
-  width: 124%;
-  height: 132%;
+  left: -10%;
+  top: -15%;
+  width: 120%;
+  height: 130%;
   pointer-events: none;
   overflow: visible;
-  transform: rotate(-2deg);
+  transform: rotate(-1.5deg);
   z-index: 2;
 }
 
