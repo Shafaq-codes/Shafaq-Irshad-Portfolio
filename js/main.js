@@ -284,6 +284,21 @@ function initContactForm() {
       submitBtn.innerHTML = originalBtnContent;
     }
   });
+
+  // Send message on Enter key (Shift+Enter for newline)
+  const msgInput = document.getElementById('senderMessage');
+  if (msgInput) {
+    msgInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        if (typeof form.requestSubmit === 'function') {
+          form.requestSubmit();
+        } else {
+          form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+        }
+      }
+    });
+  }
 }
 
 /* --------------------------------------------------------------------------
