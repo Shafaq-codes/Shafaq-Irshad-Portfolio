@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initCapsuleScrollInteraction();
   initActiveNavHighlight();
+  initHorizontalScroll();
 });
 
 /* --------------------------------------------------------------------------
@@ -300,5 +301,65 @@ function initActiveNavHighlight() {
     }
   }, { passive: true });
 }
+
+/* --------------------------------------------------------------------------
+   7. Pinned Horizontal Scroll Showcase (GSAP-like pure physics scroll)
+   -------------------------------------------------------------------------- */
+function initHorizontalScroll() {
+  const section = document.querySelector('.horizontal-works-section');
+  const track = document.getElementById('horizontalTrack');
+  const progressBar = document.getElementById('horizontalProgressBar');
+
+  if (!section || !track) return;
+
+  let isTicking = false;
+
+  function onScroll() {
+    if (window.innerWidth <= 900) {
+      track.style.transform = 'none';
+      return;
+    }
+
+    const rect = section.getBoundingClientRect();
+    const sectionTop = rect.top;
+    const totalScrollDistance = rect.height - window.innerHeight;
+
+    if (totalScrollDistance <= 0) return;
+
+    // Progress goes from 0 (at entry) to 1 (at exit)
+    let progress = -sectionTop / totalScrollDistance;
+    progress = Math.max(0, Math.min(1, progress));
+
+    // Calculate maximum distance to scroll so the last card aligns nicely
+    const trackWidth = track.scrollWidth;
+    const viewportWidth = window.innerWidth;
+    const maxTranslate = trackWidth - viewportWidth + (viewportWidth * 0.1);
+
+    const currentTranslate = progress * maxTranslate;
+
+    track.style.transform = `translateX(-${currentTranslate}px)`;
+
+    if (progressBar) {
+      progressBar.style.width = `${progress * 100}%`;
+    }
+  }
+
+  function handleScroll() {
+    if (!isTicking) {
+      window.requestAnimationFrame(() => {
+        onScroll();
+        isTicking = false;
+      });
+      isTicking = true;
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener('resize', handleScroll, { passive: true });
+  
+  // Initial compute
+  onScroll();
+}
+
 
 

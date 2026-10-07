@@ -247,182 +247,365 @@
       </div>
     </section>
 
-    <!-- 6. Featured Projects Showcase -->
-    <section class="projects-section" id="work" aria-label="Featured Projects">
-      <div class="projects-header-flex">
-        <div>
-          <span class="section-tag">SOME SELECTED PROJECTS</span>
+    <!-- 6. Featured Projects Showcase (Horizontal Pinned Scroll) -->
+    <section class="horizontal-works-section" id="work" aria-label="Featured Projects">
+      <div class="horizontal-sticky-viewport">
+        <!-- Top sticky sub-header -->
+        <div class="horizontal-header-top">
+          <div class="section-tag">SELECTED WORKS • 06 PROJECTS</div>
+          <div class="horizontal-scroll-pill">
+            <span class="pulse-dot"></span>
+            <span>SCROLL DOWN TO EXPLORE</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </div>
         </div>
-      </div>
 
-      <div class="projects-grid">
-        <!-- Project: Mail-2-Git -->
-        <article class="project-card">
-          <div class="project-preview-wrap">
-            <div class="project-mockup-pattern">
-              <i class="fa-solid fa-envelope-open-text project-mockup-icon" style="color: #38bdf8;"></i>
+        <!-- The moving track -->
+        <div class="horizontal-track-container" id="horizontalTrack">
+          
+          <!-- Slide 01: Mail-2-Git -->
+          <div class="project-slide-card">
+            <div class="slide-content-col">
+              <div class="slide-num-badge">
+                <span class="slide-num-line"></span>
+                <span class="slide-num-text">NO. 01</span>
+              </div>
+              <h2 class="slide-project-title">MAIL-2-GIT</h2>
+              <div class="slide-project-italic-sub">Cryptographic GitHub profile &amp; commit tracer.</div>
+              <p class="slide-project-body">
+                Engineered an automated OSINT intelligence tool that traces, discovers, and cryptographically verifies GitHub profiles, commit histories, and public repositories from a target email address using cryptographic Git signatures.
+              </p>
+              <div class="slide-tags-row">
+                <span class="slide-tag">Python</span>
+                <span class="slide-tag">FastAPI</span>
+                <span class="slide-tag">Git Signatures</span>
+                <span class="slide-tag">OSINT</span>
+                <span class="slide-tag">Vercel</span>
+              </div>
+              <div class="slide-action-row">
+                <a href="https://mail2git.vercel.app/" target="_blank" rel="noopener noreferrer" class="slide-view-btn" title="View Live Project">
+                  <span>VIEW PROJECT</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Shafaq-codes/Mail-2-git" target="_blank" rel="noopener noreferrer" class="slide-code-btn" title="View Source Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
             </div>
-            <span class="project-badge-type">OSINT &amp; Identity</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">
-              <span>Mail-2-Git</span>
-            </h3>
-            <p class="project-desc">
-              High-precision OSINT intelligence utility that traces and cryptographically links GitHub profiles, commit histories, and repositories from email addresses.
-            </p>
-            <div class="project-tech-pills">
-              <span class="project-pill">Python</span>
-              <span class="project-pill">FastAPI</span>
-              <span class="project-pill">Git Commits Graph</span>
-              <span class="project-pill">OSINT</span>
-              <span class="project-pill">Vercel</span>
+            <div class="slide-visual-col">
+              <div class="slide-mockup-frame">
+                <div class="mockup-header-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="mockup-header-title">mail2git.vercel.app</span>
+                </div>
+                <div class="mockup-preview-inner">
+                  <div class="mockup-glow-icon" style="color: #38bdf8;">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                  </div>
+                  <div class="mockup-info-badge">100% Cryptographic Match</div>
+                  <div class="mockup-stats-mini-grid">
+                    <div class="mini-stat">
+                      <span class="stat-num">FastAPI</span>
+                      <span class="stat-lbl">Backend Engine</span>
+                    </div>
+                    <div class="mini-stat">
+                      <span class="stat-num">Zero Speculation</span>
+                      <span class="stat-lbl">Identity Binding</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </article>
 
-        <!-- Project 1 - AKTU Notes App -->
-        <article class="project-card">
-          <div class="project-preview-wrap">
-            <div class="project-mockup-pattern">
-              <i class="fa-solid fa-book-bookmark project-mockup-icon" style="color: var(--accent-cyan);"></i>
+          <!-- Slide 02: AKTU Notes App -->
+          <div class="project-slide-card">
+            <div class="slide-content-col">
+              <div class="slide-num-badge">
+                <span class="slide-num-line"></span>
+                <span class="slide-num-text">NO. 02</span>
+              </div>
+              <h2 class="slide-project-title">AKTU NOTES APP</h2>
+              <div class="slide-project-italic-sub">Centralized academic hub for engineering students.</div>
+              <p class="slide-project-body">
+                Fast, responsive academic portal providing structured university study materials, curated subject notes, previous semester question banks, and offline resource caching.
+              </p>
+              <div class="slide-tags-row">
+                <span class="slide-tag">JavaScript</span>
+                <span class="slide-tag">HTML5 / CSS3</span>
+                <span class="slide-tag">Local Storage</span>
+                <span class="slide-tag">UI Architecture</span>
+              </div>
+              <div class="slide-action-row">
+                <a href="https://github.com/Shafaq-codes" target="_blank" rel="noopener noreferrer" class="slide-view-btn">
+                  <span>EXPLORE PROJECT</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Shafaq-codes" target="_blank" rel="noopener noreferrer" class="slide-code-btn" title="View Source Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
             </div>
-            <span class="project-badge-type">Web Application</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">
-              <span>AKTU Notes App</span>
-            </h3>
-            <p class="project-desc">
-              Fast, responsive academic portal providing centralized engineering study resources, curated subject notes, and semester question papers.
-            </p>
-            <div class="project-tech-pills">
-              <span class="project-pill">JavaScript</span>
-              <span class="project-pill">HTML5 / CSS3</span>
-              <span class="project-pill">Local Storage</span>
-              <span class="project-pill">UI Architecture</span>
+            <div class="slide-visual-col">
+              <div class="slide-mockup-frame">
+                <div class="mockup-header-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="mockup-header-title">aktu-notes.app</span>
+                </div>
+                <div class="mockup-preview-inner">
+                  <div class="mockup-glow-icon" style="color: var(--accent-cyan);">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                  </div>
+                  <div class="mockup-info-badge">Academic Knowledge Portal</div>
+                  <div class="mockup-stats-mini-grid">
+                    <div class="mini-stat">
+                      <span class="stat-num">Fast Cache</span>
+                      <span class="stat-lbl">Instant Load</span>
+                    </div>
+                    <div class="mini-stat">
+                      <span class="stat-num">Curated</span>
+                      <span class="stat-lbl">Syllabus Roadmaps</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </article>
 
-        <!-- Row 1: Project 2 - GitHub Scroll -->
-        <article class="project-card">
-          <div class="project-preview-wrap">
-            <div class="project-mockup-pattern">
-              <i class="fa-brands fa-github project-mockup-icon" style="color: var(--accent-purple);"></i>
+          <!-- Slide 03: GitHub Scroll -->
+          <div class="project-slide-card">
+            <div class="slide-content-col">
+              <div class="slide-num-badge">
+                <span class="slide-num-line"></span>
+                <span class="slide-num-text">NO. 03</span>
+              </div>
+              <h2 class="slide-project-title">GITHUB SCROLL</h2>
+              <div class="slide-project-italic-sub">Interactive repository showcase &amp; commit stream.</div>
+              <p class="slide-project-body">
+                Dynamic developer repository showcase that streams real-time public commit telemetry, branch metrics, and interactive repository insights with hardware-accelerated animations.
+              </p>
+              <div class="slide-tags-row">
+                <span class="slide-tag">GitHub API</span>
+                <span class="slide-tag">JavaScript (ES6+)</span>
+                <span class="slide-tag">CSS Animations</span>
+                <span class="slide-tag">REST APIs</span>
+              </div>
+              <div class="slide-action-row">
+                <a href="https://github.com/Shafaq-codes" target="_blank" rel="noopener noreferrer" class="slide-view-btn">
+                  <span>VIEW REPOSITORY</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Shafaq-codes" target="_blank" rel="noopener noreferrer" class="slide-code-btn" title="View GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
             </div>
-            <span class="project-badge-type">Developer Tool</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">
-              <span>GitHub Scroll</span>
-            </h3>
-            <p class="project-desc">
-              Interactive GitHub repo showcase and scroll experience with real-time commit telemetry and dynamic repository visualization.
-            </p>
-            <div class="project-tech-pills">
-              <span class="project-pill">GitHub API</span>
-              <span class="project-pill">JavaScript</span>
-              <span class="project-pill">CSS Animations</span>
-              <span class="project-pill">REST APIs</span>
+            <div class="slide-visual-col">
+              <div class="slide-mockup-frame">
+                <div class="mockup-header-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="mockup-header-title">github.com/Shafaq-codes</span>
+                </div>
+                <div class="mockup-preview-inner">
+                  <div class="mockup-glow-icon" style="color: var(--accent-purple);">
+                    <i class="fa-brands fa-github"></i>
+                  </div>
+                  <div class="mockup-info-badge">Live Telemetry Pipeline</div>
+                  <div class="mockup-stats-mini-grid">
+                    <div class="mini-stat">
+                      <span class="stat-num">Real-Time</span>
+                      <span class="stat-lbl">Commit Activity</span>
+                    </div>
+                    <div class="mini-stat">
+                      <span class="stat-num">API Driven</span>
+                      <span class="stat-lbl">GitHub Octokit</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </article>
 
-        <!-- Row 1: Project 3 - Kinetic Portfolio -->
-        <article class="project-card">
-          <div class="project-preview-wrap">
-            <div class="project-mockup-pattern">
-              <i class="fa-solid fa-eye project-mockup-icon" style="color: var(--accent-emerald);"></i>
+          <!-- Slide 04: T-Bomber -->
+          <div class="project-slide-card">
+            <div class="slide-content-col">
+              <div class="slide-num-badge">
+                <span class="slide-num-line"></span>
+                <span class="slide-num-text">NO. 04</span>
+              </div>
+              <h2 class="slide-project-title">T-BOMBER</h2>
+              <div class="slide-project-italic-sub">Multi-threaded API load stress &amp; security utility.</div>
+              <p class="slide-project-body">
+                High-concurrency Python testing suite designed for API endpoint stress assessment, throughput resilience benchmarking, and edge-case response telemetry.
+              </p>
+              <div class="slide-tags-row">
+                <span class="slide-tag">Python</span>
+                <span class="slide-tag">Multi-Threading</span>
+                <span class="slide-tag">Stress Testing</span>
+                <span class="slide-tag">CLI &amp; UI</span>
+              </div>
+              <div class="slide-action-row">
+                <a href="https://github.com/Shafaq-codes" target="_blank" rel="noopener noreferrer" class="slide-view-btn">
+                  <span>VIEW PROJECT</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Shafaq-codes" target="_blank" rel="noopener noreferrer" class="slide-code-btn" title="View Source Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
             </div>
-            <span class="project-badge-type">Creative Development</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">
-              <span>Kinetic Portfolio</span>
-            </h3>
-            <p class="project-desc">
-              Zero-lag editorial portfolio architecture featuring kinetic preloader flash sequences, interactive eye capsule masking, and smooth bento interfaces.
-            </p>
-            <div class="project-tech-pills">
-              <span class="project-pill">Modern CSS</span>
-              <span class="project-pill">Vanilla JS</span>
-              <span class="project-pill">Hardware Accelerated</span>
+            <div class="slide-visual-col">
+              <div class="slide-mockup-frame">
+                <div class="mockup-header-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="mockup-header-title">t-bomber.sh</span>
+                </div>
+                <div class="mockup-preview-inner">
+                  <div class="mockup-glow-icon" style="color: var(--accent-red);">
+                    <i class="fa-solid fa-bolt"></i>
+                  </div>
+                  <div class="mockup-info-badge">High-Concurrency Benchmark</div>
+                  <div class="mockup-stats-mini-grid">
+                    <div class="mini-stat">
+                      <span class="stat-num">Multi-Thread</span>
+                      <span class="stat-lbl">Async Engine</span>
+                    </div>
+                    <div class="mini-stat">
+                      <span class="stat-num">Resilience</span>
+                      <span class="stat-lbl">Load Testing</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </article>
 
-        <!-- Row 2: Project 4 - T-Bomber -->
-        <article class="project-card">
-          <div class="project-preview-wrap">
-            <div class="project-mockup-pattern">
-              <i class="fa-solid fa-bolt project-mockup-icon" style="color: var(--accent-red);"></i>
+          <!-- Slide 05: AI Calling Agent -->
+          <div class="project-slide-card">
+            <div class="slide-content-col">
+              <div class="slide-num-badge">
+                <span class="slide-num-line"></span>
+                <span class="slide-num-text">NO. 05</span>
+              </div>
+              <h2 class="slide-project-title">AI CALLING AGENT</h2>
+              <div class="slide-project-italic-sub">Autonomous conversational voice AI for businesses.</div>
+              <p class="slide-project-body">
+                Autonomous voice AI agent capable of holding natural, context-aware two-way voice conversations with custom enterprise knowledge bases and instantaneous audio turnaround.
+              </p>
+              <div class="slide-tags-row">
+                <span class="slide-tag">AI Voice / LLMs</span>
+                <span class="slide-tag">Node.js</span>
+                <span class="slide-tag">WebSockets</span>
+                <span class="slide-tag">Speech Synthesis</span>
+              </div>
+              <div class="slide-action-row">
+                <a href="https://github.com/Shafaq-codes" target="_blank" rel="noopener noreferrer" class="slide-view-btn">
+                  <span>VIEW PROJECT</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Shafaq-codes" target="_blank" rel="noopener noreferrer" class="slide-code-btn" title="View Source Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
             </div>
-            <span class="project-badge-type">Security &amp; Automation</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">
-              <span>T-Bomber</span>
-            </h3>
-            <p class="project-desc">
-              Multi-threaded automated API load stress and security testing utility built for endpoint vulnerability assessment and service resilience benchmarking.
-            </p>
-            <div class="project-tech-pills">
-              <span class="project-pill">Python</span>
-              <span class="project-pill">API Stress Testing</span>
-              <span class="project-pill">Automation</span>
-              <span class="project-pill">CLI / UI</span>
+            <div class="slide-visual-col">
+              <div class="slide-mockup-frame">
+                <div class="mockup-header-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="mockup-header-title">ai-agent.voice</span>
+                </div>
+                <div class="mockup-preview-inner">
+                  <div class="mockup-glow-icon" style="color: var(--accent-cyan);">
+                    <i class="fa-solid fa-headset"></i>
+                  </div>
+                  <div class="mockup-info-badge">Sub-Second Latency Audio</div>
+                  <div class="mockup-stats-mini-grid">
+                    <div class="mini-stat">
+                      <span class="stat-num">WebSockets</span>
+                      <span class="stat-lbl">Real-Time Audio</span>
+                    </div>
+                    <div class="mini-stat">
+                      <span class="stat-num">Contextual</span>
+                      <span class="stat-lbl">LLM Dialogue</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </article>
 
-        <!-- Row 2: Project 5 - AI Calling Agent -->
-        <article class="project-card">
-          <div class="project-preview-wrap">
-            <div class="project-mockup-pattern">
-              <i class="fa-solid fa-headset project-mockup-icon" style="color: var(--accent-cyan);"></i>
+          <!-- Slide 06: OSINT Search Platform -->
+          <div class="project-slide-card">
+            <div class="slide-content-col">
+              <div class="slide-num-badge">
+                <span class="slide-num-line"></span>
+                <span class="slide-num-text">NO. 06</span>
+              </div>
+              <h2 class="slide-project-title">OSINT SEARCH PLATFORM</h2>
+              <div class="slide-project-italic-sub">High-performance cyber intelligence research console.</div>
+              <p class="slide-project-body">
+                High-performance investigative intelligence console designed for digital footprint tracing, cross-platform entity correlation, and deep visual telemetry graphs.
+              </p>
+              <div class="slide-tags-row">
+                <span class="slide-tag">JavaScript</span>
+                <span class="slide-tag">Node.js</span>
+                <span class="slide-tag">Cyber Intelligence</span>
+                <span class="slide-tag">REST APIs</span>
+              </div>
+              <div class="slide-action-row">
+                <a href="https://github.com/Shafaq-codes" target="_blank" rel="noopener noreferrer" class="slide-view-btn">
+                  <span>VIEW PROJECT</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Shafaq-codes" target="_blank" rel="noopener noreferrer" class="slide-code-btn" title="View Source Code">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
             </div>
-            <span class="project-badge-type">Autonomous AI</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">
-              <span>AI Calling Agent</span>
-            </h3>
-            <p class="project-desc">
-              Autonomous voice AI calling agent capable of holding natural, real-time voice conversations on behalf of company representatives with custom business training.
-            </p>
-            <div class="project-tech-pills">
-              <span class="project-pill">AI Voice / LLMs</span>
-              <span class="project-pill">Node.js</span>
-              <span class="project-pill">WebSockets</span>
-              <span class="project-pill">Speech Synthesis</span>
+            <div class="slide-visual-col">
+              <div class="slide-mockup-frame">
+                <div class="mockup-header-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="mockup-header-title">osint-matrix.app</span>
+                </div>
+                <div class="mockup-preview-inner">
+                  <div class="mockup-glow-icon" style="color: #a855f7;">
+                    <i class="fa-solid fa-shield-cat"></i>
+                  </div>
+                  <div class="mockup-info-badge">Entity Correlation Graph</div>
+                  <div class="mockup-stats-mini-grid">
+                    <div class="mini-stat">
+                      <span class="stat-num">Graph Matrix</span>
+                      <span class="stat-lbl">Entity Tracing</span>
+                    </div>
+                    <div class="mini-stat">
+                      <span class="stat-num">Security</span>
+                      <span class="stat-lbl">Threat Analysis</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </article>
 
-        <!-- Row 2: Project 6 - OSINT Search Platform -->
-        <article class="project-card">
-          <div class="project-preview-wrap">
-            <div class="project-mockup-pattern">
-              <i class="fa-solid fa-shield-cat project-mockup-icon" style="color: #a855f7;"></i>
-            </div>
-            <span class="project-badge-type">Intelligence &amp; Security</span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">
-              <span>OSINT Search Platform</span>
-            </h3>
-            <p class="project-desc">
-              High-performance open-source intelligence research interface designed for investigative workflows, data correlation, and sleek telemetry visualization.
-            </p>
-            <div class="project-tech-pills">
-              <span class="project-pill">JavaScript</span>
-              <span class="project-pill">Node.js</span>
-              <span class="project-pill">REST APIs</span>
-              <span class="project-pill">Cyber Intelligence</span>
-            </div>
-          </div>
-        </article>
+        </div>
+
+        <!-- Bottom Progress Track -->
+        <div class="horizontal-progress-track">
+          <div class="horizontal-progress-bar" id="horizontalProgressBar"></div>
+        </div>
       </div>
     </section>
 
