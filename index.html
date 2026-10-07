@@ -472,7 +472,11 @@
             Send a Direct Message
           </h3>
           
-          <form id="portfolioContactForm" action="https://formspree.io/f/xqewbewd" method="POST" novalidate>
+          <form id="portfolioContactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="931dd09c-78a3-46ba-9015-6416f42a86e5" />
+            <input type="hidden" name="subject" value="New Direct Message from Portfolio" />
+            <input type="hidden" name="from_name" value="Shafaq Portfolio Website" />
+            
             <div class="form-group">
               <label class="form-label" for="senderName">Your Name</label>
               <input class="form-input" type="text" id="senderName" name="name" placeholder="John" required />

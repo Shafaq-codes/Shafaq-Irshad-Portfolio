@@ -200,7 +200,7 @@ function initCopyEmail() {
 }
 
 /* --------------------------------------------------------------------------
-   5. Direct Message Form Submission via mailto:
+   5. Direct Message Form Submission (Web3Forms Instant Email Delivery)
    -------------------------------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('portfolioContactForm');
@@ -209,7 +209,7 @@ function initContactForm() {
 
   if (!form || !statusMsg || !submitBtn) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const nameInput = document.getElementById('senderName');
@@ -220,28 +220,44 @@ function initContactForm() {
 
     if (!name || !message) {
       statusMsg.className = 'form-status-msg error';
-      statusMsg.textContent = 'Please fill out both your name and message.';
+      statusMsg.textContent = 'Please enter both your name and message.';
       return;
     }
 
-    const recipient = 'shafaqueries@gmail.com';
-    const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-    const body = encodeURIComponent(`Hi Shafaq,\n\n${message}\n\n— Best regards,\n${name}`);
+    const originalBtnContent = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
+    statusMsg.className = 'form-status-msg';
+    statusMsg.textContent = '';
 
-    const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    const formData = new FormData(form);
 
-    statusMsg.className = 'form-status-msg success';
-    statusMsg.textContent = '✓ Opening your email client to send message...';
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
 
-    // Trigger mail client
-    window.location.href = mailtoUrl;
+      const data = await response.json();
 
-    setTimeout(() => {
-      form.reset();
-      setTimeout(() => {
-        statusMsg.textContent = '';
-      }, 4000);
-    }, 1000);
+      if (response.status === 200 && data.success) {
+        statusMsg.className = 'form-status-msg success';
+        statusMsg.textContent = `✓ Thank you ${name}! Your message was sent directly to Shafaq's email.`;
+        form.reset();
+        setTimeout(() => {
+          statusMsg.textContent = '';
+        }, 6000);
+      } else {
+        statusMsg.className = 'form-status-msg error';
+        statusMsg.textContent = data.message || 'Something went wrong. Please try again or email directly.';
+      }
+    } catch (err) {
+      statusMsg.className = 'form-status-msg error';
+      statusMsg.textContent = 'Unable to send right now. Please email directly at shafaqueries@gmail.com';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnContent;
+    }
   });
 }
 
