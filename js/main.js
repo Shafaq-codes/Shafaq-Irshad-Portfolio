@@ -200,7 +200,7 @@ function initCopyEmail() {
 }
 
 /* --------------------------------------------------------------------------
-   5. Formspree Contact Form Submission (Asynchronous & Zero-Lag)
+   5. Direct Message Form Submission via mailto:
    -------------------------------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('portfolioContactForm');
@@ -209,42 +209,39 @@ function initContactForm() {
 
   if (!form || !statusMsg || !submitBtn) return;
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const formData = new FormData(form);
-    const originalBtnContent = submitBtn.innerHTML;
+    const nameInput = document.getElementById('senderName');
+    const msgInput = document.getElementById('senderMessage');
 
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
-    statusMsg.className = 'form-status-msg';
-    statusMsg.textContent = '';
+    const name = nameInput ? nameInput.value.trim() : '';
+    const message = msgInput ? msgInput.value.trim() : '';
 
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        statusMsg.className = 'form-status-msg success';
-        statusMsg.textContent = '✓ Thank you! Your message has been sent successfully.';
-        form.reset();
-      } else {
-        const data = await response.json();
-        statusMsg.className = 'form-status-msg error';
-        statusMsg.textContent = data.errors ? data.errors.map(err => err.message).join(', ') : 'Oops! Something went wrong. Please try again.';
-      }
-    } catch (error) {
+    if (!name || !message) {
       statusMsg.className = 'form-status-msg error';
-      statusMsg.textContent = 'Connection error. Please email directly at shafaqueries@gmail.com';
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnContent;
+      statusMsg.textContent = 'Please fill out both your name and message.';
+      return;
     }
+
+    const recipient = 'shafaqueries@gmail.com';
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+    const body = encodeURIComponent(`Hi Shafaq,\n\n${message}\n\n— Best regards,\n${name}`);
+
+    const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+    statusMsg.className = 'form-status-msg success';
+    statusMsg.textContent = '✓ Opening your email client to send message...';
+
+    // Trigger mail client
+    window.location.href = mailtoUrl;
+
+    setTimeout(() => {
+      form.reset();
+      setTimeout(() => {
+        statusMsg.textContent = '';
+      }, 4000);
+    }, 1000);
   });
 }
 
