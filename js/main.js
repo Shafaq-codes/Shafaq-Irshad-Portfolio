@@ -224,11 +224,9 @@ function initContactForm() {
     e.preventDefault();
 
     const nameInput = document.getElementById('senderName');
-    const emailInput = document.getElementById('senderEmail');
     const msgInput = document.getElementById('senderMessage');
 
     const name = nameInput ? nameInput.value.trim() : '';
-    const email = emailInput ? emailInput.value.trim() : '';
     const message = msgInput ? msgInput.value.trim() : '';
 
     if (!name || !message) {
