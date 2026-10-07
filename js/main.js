@@ -153,16 +153,14 @@ function initCapsuleScrollInteraction() {
    -------------------------------------------------------------------------- */
 function initCopyEmail() {
   const copyBox = document.getElementById('copyEmailBox');
+  const directEmailLink = document.getElementById('directEmailLink');
   const emailVal = 'shafaqueries@gmail.com';
 
-  if (!copyBox) return;
-
-  async function handleCopy() {
+  async function handleCopy(targetBtn, defaultHtml) {
     try {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(emailVal);
       } else {
-        // Fallback for non-https or restricted environments
         const textArea = document.createElement('textarea');
         textArea.value = emailVal;
         textArea.style.position = 'fixed';
@@ -175,15 +173,13 @@ function initCopyEmail() {
         document.body.removeChild(textArea);
       }
 
-      const btnText = copyBox.querySelector('.copy-email-btn');
-      if (btnText) {
-        const originalHtml = btnText.innerHTML;
-        btnText.innerHTML = '<i class="fa-solid fa-check"></i> COPIED!';
-        btnText.style.color = 'var(--accent-emerald)';
+      if (targetBtn) {
+        targetBtn.innerHTML = '<i class="fa-solid fa-check"></i> COPIED!';
+        targetBtn.style.color = 'var(--accent-emerald)';
         
         setTimeout(() => {
-          btnText.innerHTML = originalHtml;
-          btnText.style.color = '';
+          targetBtn.innerHTML = defaultHtml;
+          targetBtn.style.color = '';
         }, 2000);
       }
     } catch (err) {
@@ -191,13 +187,27 @@ function initCopyEmail() {
     }
   }
 
-  copyBox.addEventListener('click', handleCopy);
-  copyBox.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      handleCopy();
-    }
-  });
+  if (copyBox) {
+    const btnText = copyBox.querySelector('.copy-email-btn');
+    const defaultHtml = btnText ? btnText.innerHTML : '<i class="fa-regular fa-copy"></i> COPY';
+    copyBox.addEventListener('click', () => handleCopy(btnText, defaultHtml));
+    copyBox.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleCopy(btnText, defaultHtml);
+      }
+    });
+  }
+
+  if (directEmailLink) {
+    directEmailLink.addEventListener('click', () => {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(emailVal);
+        }
+      } catch (e) {}
+    });
+  }
 }
 
 /* --------------------------------------------------------------------------
