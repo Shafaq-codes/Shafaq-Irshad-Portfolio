@@ -250,7 +250,7 @@ function initContactForm() {
         },
         body: JSON.stringify({
           name: name,
-          email: email || 'visitor@portfolio.com',
+          email: 'visitor@portfolio.com',
           message: message,
           _subject: `New Portfolio Message from ${name}`,
           _captcha: 'false',
@@ -275,6 +275,7 @@ function initContactForm() {
         throw new Error(data.message || 'Submission error');
       }
     } catch (err) {
+      console.error('Contact Form Error:', err);
       statusMsg.className = 'form-status-msg error';
       statusMsg.innerHTML = `Could not send message. You can also email directly at <a href="mailto:shafaqueries@gmail.com?subject=Project Inquiry&body=${encodeURIComponent(message)}" style="color:var(--accent-cyan);text-decoration:underline;">shafaqueries@gmail.com</a>`;
     } finally {
