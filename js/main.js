@@ -201,7 +201,7 @@ function initCopyEmail() {
 }
 
 /* --------------------------------------------------------------------------
-   5. Direct Message Form Submission (Web3Forms Instant Email Delivery)
+   5. Direct Message Form Submission (Direct Instant Email Delivery)
    -------------------------------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('portfolioContactForm');
@@ -214,14 +214,16 @@ function initContactForm() {
     e.preventDefault();
 
     const nameInput = document.getElementById('senderName');
+    const emailInput = document.getElementById('senderEmail');
     const msgInput = document.getElementById('senderMessage');
 
     const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
     const message = msgInput ? msgInput.value.trim() : '';
 
     if (!name || !message) {
       statusMsg.className = 'form-status-msg error';
-      statusMsg.textContent = 'Please enter both your name and message.';
+      statusMsg.textContent = 'Please enter your name and message.';
       return;
     }
 
@@ -231,30 +233,42 @@ function initContactForm() {
     statusMsg.className = 'form-status-msg';
     statusMsg.textContent = '';
 
-    const formData = new FormData(form);
-
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://formsubmit.co/ajax/shafaqueries@gmail.com', {
         method: 'POST',
-        body: formData
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email || 'visitor@portfolio.com',
+          message: message,
+          _subject: `New Portfolio Message from ${name}`,
+          _captcha: 'false',
+          _template: 'table'
+        })
       });
 
       const data = await response.json();
 
-      if (response.status === 200 && data.success) {
+      if (response.ok && (data.success === 'true' || data.success === true)) {
         statusMsg.className = 'form-status-msg success';
-        statusMsg.textContent = `✓ Thank you ${name}! Your message was sent directly to Shafaq's email.`;
+        statusMsg.textContent = `✓ Thank you ${name}! Your message has been delivered directly to Shafaq's email.`;
         form.reset();
         setTimeout(() => {
           statusMsg.textContent = '';
-        }, 6000);
+        }, 7000);
+      } else if (data.message && data.message.includes('Activation')) {
+        statusMsg.className = 'form-status-msg success';
+        statusMsg.textContent = `✓ Sent! Please check shafaqueries@gmail.com to click the 1-time "Activate Form" button.`;
+        form.reset();
       } else {
-        statusMsg.className = 'form-status-msg error';
-        statusMsg.textContent = data.message || 'Something went wrong. Please try again or email directly.';
+        throw new Error(data.message || 'Submission error');
       }
     } catch (err) {
       statusMsg.className = 'form-status-msg error';
-      statusMsg.textContent = 'Unable to send right now. Please email directly at shafaqueries@gmail.com';
+      statusMsg.innerHTML = `Could not send message. You can also email directly at <a href="mailto:shafaqueries@gmail.com?subject=Project Inquiry&body=${encodeURIComponent(message)}" style="color:var(--accent-cyan);text-decoration:underline;">shafaqueries@gmail.com</a>`;
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalBtnContent;
